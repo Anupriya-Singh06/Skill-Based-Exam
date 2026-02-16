@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculate Result</title>
+    <script>
+        function calculate() {
+        
+            let num1 = document.getElementById("firstNumber").value;
+            let num2 = document.getElementById("secondNumber").value;
+
+            // Convert string to number
+            num1 = parseFloat(num1);
+            num2 = parseFloat(num2);
+
+            // Add numbers
+            let result = num1 + num2;
+
+            // Display result
+            document.getElementById("result").value = result;
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Simple Calculator</h2>
+
+    <label>First Number:</label>
+    <input type="text" id="firstNumber"><br><br>
+
+    <label>Second Number:</label>
+    <input type="text" id="secondNumber"><br><br>
+
+    <button onclick="calculate()">Submit</button><br><br>
+
+    <label>Result:</label>
+    <input type="text" id="result" readonly>
+
+</body>
+</html>
