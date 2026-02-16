@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Copy and Swap Program</title>
+    <script>
+        function copyValue() {
+            let first = document.getElementById("firstNumber").value;
+            document.getElementById("secondNumber").value = first;
+        }
+
+        function swapValue() {
+            let first = document.getElementById("firstNumber").value;
+            let second = document.getElementById("secondNumber").value;
+
+            document.getElementById("firstNumber").value = second;
+            document.getElementById("secondNumber").value = first;
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Copy and Swap Program</h2>
+
+    <label>First Number:</label>
+    <input type="text" id="firstNumber"><br><br>
+
+    <label>Second Number:</label>
+    <input type="text" id="secondNumber"><br><br>
+
+    <button onclick="copyValue()">COPY</button>
+    <button onclick="swapValue()">SWAP</button>
+
+</body>
+</html>
