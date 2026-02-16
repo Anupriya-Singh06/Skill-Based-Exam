@@ -4,18 +4,14 @@
     <title>Calculate Result</title>
     <script>
         function calculate() {
-        
             let num1 = document.getElementById("firstNumber").value;
             let num2 = document.getElementById("secondNumber").value;
 
             // Convert string to number
             num1 = parseFloat(num1);
             num2 = parseFloat(num2);
-
-            // Add numbers
             let result = num1 + num2;
-
-            // Display result
+           // Display result
             document.getElementById("result").value = result;
         }
     </script>
