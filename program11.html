@@ -1,0 +1,29 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>Check Whether a Number is Odd or Even</title>
+</head>
+<body>
+<h2>Check Odd or Even</h2>
+<form onsubmit="checkNumber(); return false;">
+    Enter Number:
+    <input type="number" id="number" required>
+    <br><br>
+    Status:
+    <input type="text" id="status" readonly>
+    <br><br>
+    <button type="submit">Check</button>
+</form>
+<script>
+function checkNumber() {
+    var num = parseInt(document.getElementById("number").value);
+    var statusField = document.getElementById("status");
+    if (num % 2 === 0) {
+        statusField.value = "Even Number";
+    } else {
+        statusField.value = "Odd Number";
+    }
+}
+</script>
+</body>
+</html>
