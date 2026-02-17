@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Based Calculation  From Drop Down List </title>
+</head>
+<body>
+    <h2>Task Based Calculator</h2>
+    First Number:
+    <input type="text" id="num1"><br><br>
+    Second Number:
+    <input type="text" id="num2"><br><br>
+    Select Task:
+    <select id="task">
+        <option value="add">Addition</option>
+        <option value="sub">Subtraction</option>
+        <option value="mul">Multiplication</option>
+        <option value="div">Division</option>
+    </select><br><br>
+    Result:
+    <input type="text" id="result" readonly><br><br>
+    <button onclick="calculate()">Submit</button>
+    <script>
+        function calculate() {
+            let number1 = parseFloat(document.getElementById("num1").value);
+            let number2 = parseFloat(document.getElementById("num2").value);
+            let selectedTask = document.getElementById("task").value;
+            let output;
+            if (selectedTask === "add") {
+                output = number1 + number2;
+            }
+            else if (selectedTask === "sub") {
+                output = number1 - number2;
+            }
+            else if (selectedTask === "mul") {
+                output = number1 * number2;
+            }
+            else if (selectedTask === "div") {
+                output = number1 / number2;
+            }
+            document.getElementById("result").value = output;
+        }
+    </script>
+
+</body>
+</html>
