@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Odd Even Counting </title>
+</head>
+<body>
+<h2>Count Odd and Even Numbers</h2>
+<form onsubmit="countNumbers(); return false;">
+    Enter First Number:
+    <input type="number" id="num1" required>
+    <br><br>
+    Enter Second Number:
+    <input type="number" id="num2" required>
+    <br><br>
+    Number of Even:
+    <input type="text" id="evenResult" readonly>
+    <br><br>
+    Number of Odd:
+    <input type="text" id="oddResult" readonly>
+    <br><br>
+    <button type="submit">Calculate</button>
+</form>
+<script>
+function countNumbers() {
+    var num1 = parseInt(document.getElementById("num1").value);
+    var num2 = parseInt(document.getElementById("num2").value);
+    var evenCount = 0;
+    var oddCount = 0;
+    // Ensure smaller number first
+    var start = Math.min(num1, num2);
+    var end = Math.max(num1, num2);
+    for (var i = start; i <= end; i++) {
+        if (i % 2 === 0) {
+            evenCount++;
+        } else {
+            oddCount++;
+        }
+    }
+    document.getElementById("evenResult").value = evenCount;
+    document.getElementById("oddResult").value = oddCount;
+}
+</script>
+</body>
+</html>
